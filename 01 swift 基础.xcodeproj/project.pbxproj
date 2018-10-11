@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28A4C395216F3FB8000107E9 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A4C394216F3FB8000107E9 /* TabBarViewController.swift */; };
+		28A4C398216F3FD7000107E9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A4C396216F3FD7000107E9 /* HomeViewController.swift */; };
+		28A4C399216F3FD7000107E9 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28A4C397216F3FD7000107E9 /* Home.storyboard */; };
 		2F32F2092105BC0100855200 /* OneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F32F2072105BC0100855200 /* OneViewController.swift */; };
 		2F32F20C2105BCB300855200 /* FunctionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F32F20B2105BCB300855200 /* FunctionViewController.swift */; };
 		2F77E8262046F421002915D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F77E8252046F421002915D2 /* AppDelegate.swift */; };
@@ -17,13 +20,10 @@
 		2F77E8462046F421002915D2 /* _1_swift___UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F77E8452046F421002915D2 /* _1_swift___UITests.swift */; };
 		2FA14770214174CE003AEAE4 /* UIButton-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA1476F214174CE003AEAE4 /* UIButton-Extension.swift */; };
 		2FBABA032107033E008E56C2 /* CommTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBABA022107033E008E56C2 /* CommTools.swift */; };
-		2FBABA092108183F008E56C2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBABA082108183F008E56C2 /* HomeViewController.swift */; };
 		2FBABA0B2108184D008E56C2 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBABA0A2108184D008E56C2 /* DiscoverViewController.swift */; };
 		2FBABA0D21081857008E56C2 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBABA0C21081857008E56C2 /* MessageViewController.swift */; };
 		2FBABA0F2108186F008E56C2 /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBABA0E2108186F008E56C2 /* PersonViewController.swift */; };
 		2FBABA1621081B67008E56C2 /* MainVcSetting.json in Resources */ = {isa = PBXBuildFile; fileRef = 2FBABA1521081B67008E56C2 /* MainVcSetting.json */; };
-		2FBABA18210822C4008E56C2 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBABA17210822C4008E56C2 /* TabBarViewController.swift */; };
-		2FBABA282108A93F008E56C2 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FBABA262108A93F008E56C2 /* Home.storyboard */; };
 		2FBABA2A2108A95E008E56C2 /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FBABA292108A95E008E56C2 /* Message.storyboard */; };
 		2FBABA2D2108A979008E56C2 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FBABA2B2108A979008E56C2 /* Discover.storyboard */; };
 		2FBABA2F2108A99F008E56C2 /* Person.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FBABA2E2108A99F008E56C2 /* Person.storyboard */; };
@@ -50,6 +50,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		28A4C394216F3FB8000107E9 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		28A4C396216F3FD7000107E9 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		28A4C397216F3FD7000107E9 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		2F32F2072105BC0100855200 /* OneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneViewController.swift; sourceTree = "<group>"; };
 		2F32F20B2105BCB300855200 /* FunctionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionViewController.swift; sourceTree = "<group>"; };
 		2F77E8222046F421002915D2 /* 01 swift 基础.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "01 swift 基础.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,13 +69,10 @@
 		2F77E8472046F421002915D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2FA1476F214174CE003AEAE4 /* UIButton-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton-Extension.swift"; sourceTree = "<group>"; };
 		2FBABA022107033E008E56C2 /* CommTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommTools.swift; sourceTree = "<group>"; };
-		2FBABA082108183F008E56C2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2FBABA0A2108184D008E56C2 /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		2FBABA0C21081857008E56C2 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		2FBABA0E2108186F008E56C2 /* PersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewController.swift; sourceTree = "<group>"; };
 		2FBABA1521081B67008E56C2 /* MainVcSetting.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MainVcSetting.json; sourceTree = "<group>"; };
-		2FBABA17210822C4008E56C2 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		2FBABA272108A93F008E56C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "01 swift 基础/Base.lproj/Home.storyboard"; sourceTree = "<group>"; };
 		2FBABA292108A95E008E56C2 /* Message.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Message.storyboard; sourceTree = "<group>"; };
 		2FBABA2C2108A979008E56C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "01 swift 基础/Base.lproj/Discover.storyboard"; sourceTree = "<group>"; };
 		2FBABA2E2108A99F008E56C2 /* Person.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Person.storyboard; sourceTree = "<group>"; };
@@ -195,8 +195,8 @@
 		2FBABA052108182E008E56C2 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				2FBABA082108183F008E56C2 /* HomeViewController.swift */,
-				2FBABA262108A93F008E56C2 /* Home.storyboard */,
+				28A4C397216F3FD7000107E9 /* Home.storyboard */,
+				28A4C396216F3FD7000107E9 /* HomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -240,9 +240,9 @@
 		2FC767E920C554C9007C2331 /* mainTableView */ = {
 			isa = PBXGroup;
 			children = (
+				28A4C394216F3FB8000107E9 /* TabBarViewController.swift */,
 				2FC767EA20C55508007C2331 /* MainTableViewController.swift */,
 				2F32F20B2105BCB300855200 /* FunctionViewController.swift */,
-				2FBABA17210822C4008E56C2 /* TabBarViewController.swift */,
 				2FBABA452109CE30008E56C2 /* Center */,
 				2FBABA10210818A8008E56C2 /* Resource */,
 				2FBABA062108182E008E56C2 /* Discover */,
@@ -361,9 +361,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F77E8302046F421002915D2 /* LaunchScreen.storyboard in Resources */,
-				2FBABA282108A93F008E56C2 /* Home.storyboard in Resources */,
 				2F77E82D2046F421002915D2 /* Assets.xcassets in Resources */,
 				2FBABA442109CE12008E56C2 /* Center.storyboard in Resources */,
+				28A4C399216F3FD7000107E9 /* Home.storyboard in Resources */,
 				2FBABA1621081B67008E56C2 /* MainVcSetting.json in Resources */,
 				2FBABA2A2108A95E008E56C2 /* Message.storyboard in Resources */,
 				2FBABA2D2108A979008E56C2 /* Discover.storyboard in Resources */,
@@ -395,16 +395,16 @@
 			files = (
 				2FC767EB20C55508007C2331 /* MainTableViewController.swift in Sources */,
 				2FBABA0D21081857008E56C2 /* MessageViewController.swift in Sources */,
-				2FBABA18210822C4008E56C2 /* TabBarViewController.swift in Sources */,
 				2FC767E520C539A1007C2331 /* HttpTool.swift in Sources */,
 				2F77E8262046F421002915D2 /* AppDelegate.swift in Sources */,
+				28A4C395216F3FB8000107E9 /* TabBarViewController.swift in Sources */,
 				2F32F20C2105BCB300855200 /* FunctionViewController.swift in Sources */,
 				2FBABA0F2108186F008E56C2 /* PersonViewController.swift in Sources */,
 				2FA14770214174CE003AEAE4 /* UIButton-Extension.swift in Sources */,
 				2F32F2092105BC0100855200 /* OneViewController.swift in Sources */,
 				2FBABA0B2108184D008E56C2 /* DiscoverViewController.swift in Sources */,
-				2FBABA092108183F008E56C2 /* HomeViewController.swift in Sources */,
 				2FBABA032107033E008E56C2 /* CommTools.swift in Sources */,
+				28A4C398216F3FD7000107E9 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,14 +454,6 @@
 				2F77E82F2046F421002915D2 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		2FBABA262108A93F008E56C2 /* Home.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2FBABA272108A93F008E56C2 /* Base */,
-			);
-			name = Home.storyboard;
 			sourceTree = "<group>";
 		};
 		2FBABA2B2108A979008E56C2 /* Discover.storyboard */ = {

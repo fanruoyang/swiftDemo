@@ -9,7 +9,20 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    
+    private lazy var visitorView : UIView = UIView()
 
+    var isLogin : Bool = false
+    
+    override func loadView() {
+        isLogin ? super.loadView():setupVistiorView()
+    }
+    
+    private func setupVistiorView(){
+        visitorView.backgroundColor = UIColor.red
+        view = visitorView
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -24,6 +24,8 @@ class TabBarViewController: UITabBarController {
       //  addButton.setBackgroundImage(UIImage(named: "home_tab_homepage"), for: .normal)
         addButton.sizeToFit()
         addButton.center = CGPoint(x: tabBar.center.x, y: tabBar.bounds.size.height*0.5);
+        addButton .addTarget(self, action:#selector(click), for: .touchUpInside)
+        addButton.tag = 1001
         
     }
 
@@ -42,7 +44,6 @@ class TabBarViewController: UITabBarController {
          
         }
     }
-  
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -52,4 +53,19 @@ class TabBarViewController: UITabBarController {
 
 }
 
+
+
+extension TabBarViewController{
+    
+    //事件监听本事是发送消息，但是发送消息是CO的特性
+    //将方法包装成@SEL --> 类中查找方法列表 --> 根据@SEL 找到IMP 的指针(函数指针)-->执行函数
+    //如果swift中将一个函数申明称 private ，那么该函数就不会被放到消息列表中
+    //需要在前面加上@objc 才行
+    
+    @objc func click(sender :UIButton){
+        
+        print(sender.tag)
+    }
+    
+}
 
