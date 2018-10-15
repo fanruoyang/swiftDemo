@@ -27,10 +27,10 @@ extension BasePresentationController{
     private func setupCoverView (){
         // 1.添加蒙版
 
-    containerView?.addSubview(coverView)
+    containerView?.insertSubview(coverView, at: 0)
         // 2. 设置蒙版属性
         
-        coverView.backgroundColor = UIColor(white : 0.8 , alpha: 0.3)
+        coverView.backgroundColor = UIColor(white : 0.5 , alpha: 0.3)
         coverView.frame = containerView!.bounds
         
         // 3. 添加手势
@@ -46,7 +46,8 @@ extension BasePresentationController{
 extension BasePresentationController{
     
     @objc private func coverTap(){
-        
+       //被弹出的控制器
+        presentedViewController.dismiss(animated: true, completion: nil)
         
     }
     
