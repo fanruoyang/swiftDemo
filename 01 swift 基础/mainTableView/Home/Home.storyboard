@@ -55,7 +55,7 @@
         <!--首页-->
         <scene sceneID="dgL-qW-DVc">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZlT-eG-zXR" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZlT-eG-zXR" customClass="BaseNavViewController" customModule="_1_swift_基础" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="首页" image="home_tab_homepage" selectedImage="home_tab_homepage_pre" id="XM3-VH-Dkp">
                         <color key="badgeColor" red="1" green="0.61960784310000006" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>

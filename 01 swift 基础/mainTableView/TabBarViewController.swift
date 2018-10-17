@@ -65,6 +65,12 @@ extension TabBarViewController{
     
     @objc func click(sender :UIButton){
         
+        let centerVC = CenterViewController()
+        
+        let centerMainVC = BaseNavViewController.init(rootViewController: centerVC)
+        
+        present(centerMainVC, animated: true, completion: nil)
+        
         print(sender.tag)
     }
     

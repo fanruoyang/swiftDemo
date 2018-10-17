@@ -20,6 +20,8 @@
 		28A566222176DDF700A67F3A /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28A566232176DDF700A67F3A /* SnapKit.framework */; };
 		28A5662421771C0A00A67F3A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28A5662521771C0A00A67F3A /* SwiftyJSON.framework */; };
 		28A56627217728A300A67F3A /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A56626217728A300A67F3A /* HomeModel.swift */; };
+		28A56629217737BB00A67F3A /* CenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A56628217737BB00A67F3A /* CenterViewController.swift */; };
+		28A5662B2177393900A67F3A /* BaseNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A5662A2177393900A67F3A /* BaseNavViewController.swift */; };
 		2F32F2092105BC0100855200 /* OneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F32F2072105BC0100855200 /* OneViewController.swift */; };
 		2F32F20C2105BCB300855200 /* FunctionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F32F20B2105BCB300855200 /* FunctionViewController.swift */; };
 		2F77E8262046F421002915D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F77E8252046F421002915D2 /* AppDelegate.swift */; };
@@ -89,6 +91,8 @@
 		28A566232176DDF700A67F3A /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		28A5662521771C0A00A67F3A /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		28A56626217728A300A67F3A /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		28A56628217737BB00A67F3A /* CenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterViewController.swift; sourceTree = "<group>"; };
+		28A5662A2177393900A67F3A /* BaseNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavViewController.swift; sourceTree = "<group>"; };
 		2F32F2072105BC0100855200 /* OneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneViewController.swift; sourceTree = "<group>"; };
 		2F32F20B2105BCB300855200 /* FunctionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionViewController.swift; sourceTree = "<group>"; };
 		2F77E8222046F421002915D2 /* 01 swift 基础.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "01 swift 基础.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -307,6 +311,7 @@
 			isa = PBXGroup;
 			children = (
 				2FBABA422109CE12008E56C2 /* Center.storyboard */,
+				28A56628217737BB00A67F3A /* CenterViewController.swift */,
 			);
 			path = Center;
 			sourceTree = "<group>";
@@ -314,6 +319,7 @@
 		2FC767E920C554C9007C2331 /* mainTableView */ = {
 			isa = PBXGroup;
 			children = (
+				28A5662A2177393900A67F3A /* BaseNavViewController.swift */,
 				28A4C394216F3FB8000107E9 /* TabBarViewController.swift */,
 				2FC767EA20C55508007C2331 /* MainTableViewController.swift */,
 				2F32F20B2105BCB300855200 /* FunctionViewController.swift */,
@@ -586,6 +592,7 @@
 				28A4C39E2170966D000107E9 /* PopViewController.swift in Sources */,
 				2FC767E520C539A1007C2331 /* HttpTool.swift in Sources */,
 				2F77E8262046F421002915D2 /* AppDelegate.swift in Sources */,
+				28A56629217737BB00A67F3A /* CenterViewController.swift in Sources */,
 				28A4C3A221757E99000107E9 /* PopoverAnimator.swift in Sources */,
 				28A4C395216F3FB8000107E9 /* TabBarViewController.swift in Sources */,
 				2F32F20C2105BCB300855200 /* FunctionViewController.swift in Sources */,
@@ -593,6 +600,7 @@
 				2FA14770214174CE003AEAE4 /* UIButton-Extension.swift in Sources */,
 				2F32F2092105BC0100855200 /* OneViewController.swift in Sources */,
 				2FBABA0B2108184D008E56C2 /* DiscoverViewController.swift in Sources */,
+				28A5662B2177393900A67F3A /* BaseNavViewController.swift in Sources */,
 				2FBABA032107033E008E56C2 /* CommTools.swift in Sources */,
 				28A4C39B21704E2E000107E9 /* TitleButton.swift in Sources */,
 				28A4C398216F3FD7000107E9 /* HomeViewController.swift in Sources */,
@@ -782,7 +790,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "01 swift 基础/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CODE_SIGN_FLAGS = "-D DEBUG";
 				"OTHER_CODE_SIGN_FLAGS[sdk=*]" = "";
@@ -803,7 +811,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "01 swift 基础/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dc.shangtang.-1-swift---";
 				PRODUCT_NAME = "$(TARGET_NAME)";
