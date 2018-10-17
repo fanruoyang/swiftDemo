@@ -10,13 +10,17 @@ import UIKit
 
 class BasePresentationController: UIPresentationController {
     
+    // MARK:------------------- 对外暴露属性 -------------------
+    var presentedFrame: CGRect = .zero
+    
+    
     private lazy var coverView : UIView = UIView()
     
 //修改控制的view的frame
     override func containerViewWillLayoutSubviews() {
         super.containerViewWillLayoutSubviews()
        //弹出的视图
-        presentedView?.frame = CGRect (x: 100, y: 100, width: 200, height: 300)
+        presentedView?.frame = presentedFrame
         
         //添加蒙版
         setupCoverView ()

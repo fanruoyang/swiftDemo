@@ -8,14 +8,16 @@
 
 import UIKit
 
-
-
 class HomeViewController: UIViewController {
 
-    //判断转场动画的bool
-    var isPresent : Bool = false
-    
     // MARK:------------------- 懒加载 -------------------
+    //如果闭包中如果使用当前对象或者调用方法，需要加self
+    // 俩个地方需要用self 1> 如果一个函数中出现歧义  2> 在闭包中使用当前对象或者函数方法
+    // 存在循环引用 在()前面加[weak self] self需要加？可选类型
+    private lazy var popoverAnimator = PopoverAnimator.init {[weak self] (presented) in
+        self?.titleButton.isSelected = presented
+    }
+    
     
     private lazy var titleButton : TitleButton = TitleButton()
     
@@ -59,10 +61,7 @@ extension  HomeViewController{
         titleButton .addTarget(self, action:#selector(HomeViewController.titleclick), for: .touchUpInside)
         
         navigationItem.titleView = titleButton
-        
-        
-        
-        
+   
     }
     
 }
@@ -80,102 +79,22 @@ extension HomeViewController{
         print("登录")
     }
     @objc func titleclick(titleButton:TitleButton ){
-        titleButton.isSelected = !titleButton.isSelected
+//        titleButton.isSelected = !titleButton.isSelected
         
         print("title___%d",titleButton.tag)
-        
-        
+        // 1 初始化弹出控制器
         let popVc = PopViewController()
         
-        //3 不设置的话下面的tabbar控制器会消失---弹出样式
+        //2 不设置的话下面的tabbar控制器会消失---弹出样式
         popVc.modalPresentationStyle = .custom
-        //4 改变对应的控制的frame----设置转场的代理
-        popVc.transitioningDelegate = self
+        //3 改变对应的控制的frame----设置转场的代理
+        popVc.transitioningDelegate = popoverAnimator
         
+        popoverAnimator.presentedFrame = .init(x: 100, y: 80, width: 180, height: 200)
+        //4 弹出
         present(popVc, animated: true, completion: nil)
         
     }
-    
-}
-
-/*
- 自定义转场动画的代理，
- presenting 弹出的控制器
- presented 发起的控制器
- 
- */
-extension HomeViewController : UIViewControllerTransitioningDelegate{
-    //1 改变view弹出的尺寸
-    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-        return BasePresentationController (presentedViewController: presented, presenting: presenting)
-    }
-    //2 自定义弹出动画
-    
-    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        
-        isPresent = true
-        return self
-    }
-    
-    //3 自定义消失动画
-    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        isPresent = false
-        return self
-    }
-    
-}
-
-// MARK:------------------- 弹出和消失动画的代理方法 -------------------
-extension HomeViewController : UIViewControllerAnimatedTransitioning{
-    //动画执行的时间
-    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        
-        return 0.5
-    }
-    //获取转场的上下文--画布：获取弹出的view和消失的view
-    //   UITransitionContextToViewKey : 获取弹出的view
-    //   UITransitionContextFromViewKey : 获取消失的view
-    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        isPresent ? animateTransitionToPresentView(transitionContext: transitionContext):animateTransitionFromPresentView(transitionContext: transitionContext)
-        
-    }
-    
-    //自定义弹出动画
-    private func animateTransitionToPresentView(transitionContext:UIViewControllerContextTransitioning){
-        let presentView = transitionContext.view(forKey: .to)!
-        
-        transitionContext.containerView.addSubview(presentView)
-        presentView.transform = .init(scaleX: 1, y: 0)
-        presentView.layer.anchorPoint = CGPoint (x: 0.5, y: 0)
-        
-        UIView .animate(withDuration: transitionDuration(using: transitionContext), animations: {
-            presentView.transform = .identity
-            
-        }) { (_) in
-            transitionContext.completeTransition(true)
-        }
-        
-        
-        
-    }
-    //自定义弹出动画
-    private func animateTransitionFromPresentView(transitionContext:UIViewControllerContextTransitioning){
-        
-        //获取消失的view
-        let presentView = transitionContext.view(forKey: .from)!
-        
-        // 动画
-        UIView .animate(withDuration: transitionDuration(using: transitionContext), animations: {
-         presentView.transform = .init(scaleX: 1, y: 0.0001)
-            
-        }) { (_) in
-            transitionContext.completeTransition(true)
-        }
-        
-        
-        
-    }
-    
     
 }
 
