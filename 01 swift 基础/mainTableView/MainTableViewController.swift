@@ -9,6 +9,7 @@
 import UIKit
 
 
+
 class MainTableViewController: UIViewController {
     //注释
     // MARK:---懒加载
@@ -17,6 +18,7 @@ class MainTableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+ 
     }
     
     

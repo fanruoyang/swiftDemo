@@ -18,5 +18,7 @@ target '01 swift 基础' do
   end
 
   pod 'Alamofire'
+  pod 'SnapKit'
+  pod 'SwiftyJSON'
 
 end

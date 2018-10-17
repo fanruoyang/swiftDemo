@@ -16,6 +16,10 @@
 		28A4C3A221757E99000107E9 /* PopoverAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A4C3A121757E99000107E9 /* PopoverAnimator.swift */; };
 		28A4C3A72175CCCD000107E9 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A4C3A62175CCCD000107E9 /* NetworkTools.swift */; };
 		28A4C3A92175CE17000107E9 /* RegistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A4C3A82175CE17000107E9 /* RegistViewController.swift */; };
+		28A5661D2176D8A000A67F3A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28A5661E2176D8A000A67F3A /* Alamofire.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		28A566222176DDF700A67F3A /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28A566232176DDF700A67F3A /* SnapKit.framework */; };
+		28A5662421771C0A00A67F3A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28A5662521771C0A00A67F3A /* SwiftyJSON.framework */; };
+		28A56627217728A300A67F3A /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A56626217728A300A67F3A /* HomeModel.swift */; };
 		2F32F2092105BC0100855200 /* OneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F32F2072105BC0100855200 /* OneViewController.swift */; };
 		2F32F20C2105BCB300855200 /* FunctionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F32F20B2105BCB300855200 /* FunctionViewController.swift */; };
 		2F77E8262046F421002915D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F77E8252046F421002915D2 /* AppDelegate.swift */; };
@@ -38,7 +42,6 @@
 		2FC767EB20C55508007C2331 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC767EA20C55508007C2331 /* MainTableViewController.swift */; };
 		C93D545CBAD4AC620229F9A3 /* Pods_01_swift___Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D19381F9301788FF715E32D /* Pods_01_swift___Tests.framework */; };
 		E0ED53DBE01F1FEBB03D9727 /* Pods_01_swift___UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49AD68D47F2FC15110A7D428 /* Pods_01_swift___UITests.framework */; };
-		E17160260D762ED63CA9881B /* Pods_01_swift___.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C630DF5D065897086C655187 /* Pods_01_swift___.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +64,7 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		28A5661C2176D4C600A67F3A /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
@@ -82,6 +85,10 @@
 		28A4C3A121757E99000107E9 /* PopoverAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverAnimator.swift; sourceTree = "<group>"; };
 		28A4C3A62175CCCD000107E9 /* NetworkTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
 		28A4C3A82175CE17000107E9 /* RegistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistViewController.swift; sourceTree = "<group>"; };
+		28A5661E2176D8A000A67F3A /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		28A566232176DDF700A67F3A /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		28A5662521771C0A00A67F3A /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		28A56626217728A300A67F3A /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		2F32F2072105BC0100855200 /* OneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneViewController.swift; sourceTree = "<group>"; };
 		2F32F20B2105BCB300855200 /* FunctionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionViewController.swift; sourceTree = "<group>"; };
 		2F77E8222046F421002915D2 /* 01 swift 基础.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "01 swift 基础.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,7 +130,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E17160260D762ED63CA9881B /* Pods_01_swift___.framework in Frameworks */,
+				28A5662421771C0A00A67F3A /* SwiftyJSON.framework in Frameworks */,
+				28A566222176DDF700A67F3A /* SnapKit.framework in Frameworks */,
+				28A5661D2176D8A000A67F3A /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +270,7 @@
 				28A4C397216F3FD7000107E9 /* Home.storyboard */,
 				28A4C396216F3FD7000107E9 /* HomeViewController.swift */,
 				28A4C3A82175CE17000107E9 /* RegistViewController.swift */,
+				28A56626217728A300A67F3A /* HomeModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -333,6 +343,9 @@
 		AB398E6B2762E5D678832B52 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				28A5662521771C0A00A67F3A /* SwiftyJSON.framework */,
+				28A566232176DDF700A67F3A /* SnapKit.framework */,
+				28A5661E2176D8A000A67F3A /* Alamofire.framework */,
 				5D19381F9301788FF715E32D /* Pods_01_swift___Tests.framework */,
 				49AD68D47F2FC15110A7D428 /* Pods_01_swift___UITests.framework */,
 				C630DF5D065897086C655187 /* Pods_01_swift___.framework */,
@@ -347,12 +360,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F77E84A2046F421002915D2 /* Build configuration list for PBXNativeTarget "01 swift 基础" */;
 			buildPhases = (
-				103B022C0F0DC53CA2BD6597 /* [CP] Check Pods Manifest.lock */,
+				4F0A977970D5BE4EBC699B1C /* [CP] Check Pods Manifest.lock */,
 				2F77E81E2046F421002915D2 /* Sources */,
 				2F77E81F2046F421002915D2 /* Frameworks */,
 				2F77E8202046F421002915D2 /* Resources */,
-				898A9641C81A24505A7FE3C9 /* [CP] Embed Pods Frameworks */,
 				28A5661C2176D4C600A67F3A /* Embed Frameworks */,
+				8F91CD79F78D87FEB196254C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -481,24 +494,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		103B022C0F0DC53CA2BD6597 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-01 swift 基础-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		2EE95BFA662B5CE8444B35EC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -511,6 +506,24 @@
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-01 swift 基础Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F0A977970D5BE4EBC699B1C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-01 swift 基础-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -535,7 +548,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		898A9641C81A24505A7FE3C9 /* [CP] Embed Pods Frameworks */ = {
+		8F91CD79F78D87FEB196254C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -543,10 +556,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-01 swift 基础/Pods-01 swift 基础-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -564,6 +581,7 @@
 				28A4C3A72175CCCD000107E9 /* NetworkTools.swift in Sources */,
 				28A4C3A92175CE17000107E9 /* RegistViewController.swift in Sources */,
 				28A4C3A021709EA1000107E9 /* BasePresentationController.swift in Sources */,
+				28A56627217728A300A67F3A /* HomeModel.swift in Sources */,
 				2FBABA0D21081857008E56C2 /* MessageViewController.swift in Sources */,
 				28A4C39E2170966D000107E9 /* PopViewController.swift in Sources */,
 				2FC767E520C539A1007C2331 /* HttpTool.swift in Sources */,
@@ -764,6 +782,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "01 swift 基础/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CODE_SIGN_FLAGS = "-D DEBUG";
 				"OTHER_CODE_SIGN_FLAGS[sdk=*]" = "";
@@ -784,6 +803,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "01 swift 基础/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dc.shangtang.-1-swift---";
 				PRODUCT_NAME = "$(TARGET_NAME)";

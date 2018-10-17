@@ -14,7 +14,7 @@ class OneViewController: UIViewController {
         super.viewDidLoad()
         
         //获取打印所在文件的路径
-       let  file = (#file as NSString).lastPathComponent
+        _ = (#file as NSString).lastPathComponent
 
         
         
