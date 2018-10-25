@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 
 /// 自定义Log打印
@@ -30,3 +31,8 @@ func FYLog<T> (message: T, fileName: String = #file, funcName: String = #functio
     #endif
     
 }
+
+
+let Main_Screen_With = UIScreen.main.bounds.width
+
+let Main_Screen_Height = UIScreen.main.bounds.height

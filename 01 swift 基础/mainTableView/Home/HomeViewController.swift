@@ -74,6 +74,13 @@ extension HomeViewController{
     @objc func registerClick(){
         
         print("注册")
+        
+        let regisVC = RegistViewController ()
+        
+       self.navigationController?.pushViewController(regisVC, animated: true)
+           
+        
+        
     }
     
     @objc func loghinClick(){
