@@ -36,3 +36,28 @@ func FYLog<T> (message: T, fileName: String = #file, funcName: String = #functio
 let Main_Screen_With = UIScreen.main.bounds.width
 
 let Main_Screen_Height = UIScreen.main.bounds.height
+
+//判断是否是iPhone
+let isPhone = Bool(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiom.phone)
+
+//判断是否是iPhone X
+let isPhoneX = Bool(Main_Screen_With >= 375.0 && Main_Screen_Height >= 812.0 && isPhone)
+
+//导航条的高度
+let kNavigationHeight = CGFloat(isPhoneX ? 88 : 64)
+//状态栏高度
+let kStatusBarHeight = CGFloat(isPhoneX ? 44 : 20)
+//tabbar高度
+let kTabBarHeight = CGFloat(isPhoneX ? (49 + 34) : 49)
+//顶部安全区域远离高度
+let kTopSafeHeight = CGFloat(isPhoneX ? 44 : 0)
+
+//底部安全区域远离高度
+let kBottomSafeHeight = CGFloat(isPhoneX ? 34 : 0)
+
+//let kStatusBarH : CGFloat = 20
+//let kNavigationBarH : CGFloat = 44
+let kTabbarH : CGFloat = 44
+
+let kScreenW = UIScreen.main.bounds.width
+let kScreenH = UIScreen.main.bounds.height

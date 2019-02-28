@@ -43,7 +43,7 @@ extension PopViewController{
     
     @objc func registerClick(){
         
-        print("注册")
+        print("注fff册")
         dismiss(animated: true, completion: nil)
     }
     

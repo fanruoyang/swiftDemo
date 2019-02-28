@@ -20,5 +20,7 @@ target '01 swift 基础' do
   pod 'Alamofire'
   pod 'SnapKit'
   pod 'SwiftyJSON'
+  pod 'HandyJSON', '~> 4.2.0'
+  pod 'Kingfisher'
 
 end

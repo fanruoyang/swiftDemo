@@ -29,6 +29,7 @@ class TabBarViewController: UITabBarController {
         
     }
 
+
     override func viewWillAppear(_ animated: Bool) {
             super.viewWillAppear(animated)
         
@@ -76,3 +77,13 @@ extension TabBarViewController{
     
 }
 
+//不用连线添加用代码
+/*
+private func addChildVC(name: String) {
+    let childVc = UIStoryboard(name: name, bundle: nil)
+        .instantiateInitialViewController()!
+    
+    addChildVC(name: childVc)
+}
+
+*/

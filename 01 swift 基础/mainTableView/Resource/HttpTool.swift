@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class HttpTool: NSObject {
     var callBack:((_ jsonDota:String) -> ())?
     

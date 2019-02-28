@@ -8,6 +8,12 @@
 
 import UIKit
 
+//面向协议开发---java 面向接口开发
+//需要参数，别人帮忙拿到，别人遵守
+protocol addddadasfaDelegate:NSObjectProtocol {
+    func startRect(indexPath : NSIndexPath) -> CGRect
+    
+}
 class PopoverAnimator: NSObject {
     //判断转场动画的bool
     var isPresent : Bool = false
@@ -24,9 +30,9 @@ class PopoverAnimator: NSObject {
         
     }
 
+    //协议问题
     
-    
-    
+    var  dddddelegate : addddadasfaDelegate?
 }
 
 /*

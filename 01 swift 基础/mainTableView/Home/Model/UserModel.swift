@@ -24,11 +24,11 @@ class UserModel: NSObject ,NSCoding{
     }
     // MARK:------------------- 重新 description 属性 -------------------
      // 将模型转换为字典
-    override var description: String{
-        // 将字典转换为字符串
-        return dictionaryWithValues(forKeys: ["uid","userName"]).description
-        
-    }
+//    override var description: String{
+//        // 将字典转换为字符串
+//        return dictionaryWithValues(forKeys: ["uid","userName"]).description
+//        
+//    }
     
     // MARK:------------------- 归档 解档 -------------------
     //归档

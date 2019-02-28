@@ -51,8 +51,8 @@ extension NetworkTools{
             case .failure(let error):
                 print(error)
             }
-            print(response.request)  // 原始的URL请求
-            print(response.response) // HTTP URL响应
+            print(response.request ?? AnyObject.self)  // 原始的URL请求
+            print(response.response ?? AnyObject.self) // HTTP URL响应
             print(response.data )     // 服务器返回的数据
             print(response.result)   // 响应序列化结果，在这个闭包里，存储的是JSON数据
             
@@ -83,11 +83,11 @@ extension NetworkTools{
             })
     }
     
-    func get(url:String,successBlock:@escaping AFSNetSuccessBlock,faliedBlock:@escaping AFSNetFaliedBlock){
+    func get(url:String,param:Parameters?,successBlock:@escaping AFSNetSuccessBlock,faliedBlock:@escaping AFSNetFaliedBlock){
         
         let headers  : HTTPHeaders = ["Content-Type":"application/json;charset=utf-8"]; // http
         
-        self.manager.request(url, method: HTTPMethod.get, parameters: nil, encoding: URLEncoding.default, headers: headers)
+        self.manager.request(url, method: HTTPMethod.get, parameters: param, encoding: URLEncoding.default, headers: headers)
             .validate()
             .responseJSON(completionHandler: { (response) in
                 self.handleResponse(response: response, successBlock: successBlock, faliedBlock: faliedBlock);
@@ -204,6 +204,7 @@ extension NetworkTools{
         }else if ( errorInfo.code == -1004 ){
             errorInfo.message = "服务器没有启动";
         }else if ( errorInfo.code == 404 || errorInfo.code == 3){
+            
         }
         
         faliedBlock(errorInfo);
@@ -215,11 +216,11 @@ extension NetworkTools{
     /** 处理请求成功数据*/
     private func handleRequestSuccess(value:Any,successBlock:AFSNetSuccessBlock,faliedBlock:AFSNetFaliedBlock){
         let json = JSON(value);
-        if json["code"].int != nil && json["code"].int! == 1 { // 拦截
+        if json["error"].int != nil && json["error"].int! == 0 { // 拦截
             successBlock(value as! NSDictionary,json);
-        }else if json["code"].int != nil { // 获取服务器返回失败原因
+        }else if json["error"].int != nil { // 获取服务器返回失败原因
             var errorInfo   = AFSErrorInfo();
-            errorInfo.code  = json["code"].int!;
+            errorInfo.code  = json["error"].int!;
             errorInfo.message = json["msg"].string != nil ? json["msg"].string! : "不认识的错误";
             faliedBlock(errorInfo);
         }

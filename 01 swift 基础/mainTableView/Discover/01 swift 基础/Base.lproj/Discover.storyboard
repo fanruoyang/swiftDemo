@@ -1,42 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2lD-BP-2kC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2lD-BP-2kC">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--搜索-->
-        <scene sceneID="DM1-IR-m85">
+        <!--斗鱼页面-->
+        <scene sceneID="8x0-Dz-pji">
             <objects>
-                <tableViewController id="Imr-Gg-P6V" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="u8a-qu-6fM">
+                <viewController id="hMI-lJ-Crq" customClass="DiscoverViewController" customModule="_1_swift_基础" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BNJ-5C-NSt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="qKF-f7-HYb">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qKF-f7-HYb" id="fxW-Jp-Uku">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="Imr-Gg-P6V" id="DYj-qj-bsF"/>
-                            <outlet property="delegate" destination="Imr-Gg-P6V" id="bqj-ew-oqV"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="搜索" id="d0a-pb-6vH"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="okE-Vq-xrD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <viewLayoutGuide key="safeArea" id="k2S-XJ-Pwh"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="斗鱼页面" id="cBh-zY-1FZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h9r-DA-3OJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="756" y="1102"/>
+            <point key="canvasLocation" x="546" y="983"/>
         </scene>
         <!--发现-->
         <scene sceneID="xP6-hr-kop">
@@ -48,12 +36,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Imr-Gg-P6V" kind="relationship" relationship="rootViewController" id="QgY-br-JLQ"/>
+                        <segue destination="hMI-lJ-Crq" kind="relationship" relationship="rootViewController" id="JkD-YT-7PG"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zCL-Ft-Yyx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-394" y="1103"/>
+            <point key="canvasLocation" x="-426" y="983"/>
         </scene>
     </scenes>
     <resources>

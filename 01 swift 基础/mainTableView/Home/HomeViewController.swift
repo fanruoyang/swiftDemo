@@ -39,6 +39,7 @@ class HomeViewController: UIViewController {
         
         setUI()
     }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -55,6 +56,7 @@ extension  HomeViewController{
     
     private func setUI() {
         navigationItem.leftBarButtonItem = UIBarButtonItem (title: "注册", style: .plain, target: self, action:#selector(HomeViewController.registerClick))
+        
         
         navigationItem.rightBarButtonItem = UIBarButtonItem (title: "登录", style: .plain, target: self, action:#selector(HomeViewController.loghinClick))
         
@@ -102,7 +104,21 @@ extension HomeViewController{
         //4 弹出
         present(popVc, animated: true, completion: nil)
         
+        
+        // 这里那个协议需要通过通知传值，将对象传过来 然后进行赋值设置代理--见图片
+        popoverAnimator.dddddelegate = self
+        
     }
     
 }
 
+extension HomeViewController :addddadasfaDelegate{
+    func startRect(indexPath: NSIndexPath) -> CGRect {
+        
+        return CGRect.init(x: 0, y: 0, width: 333, height: 666)
+
+    }
+    
+    
+    
+}

@@ -13,6 +13,9 @@ class MessageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem (title: "注册", style: .plain, target: self, action:#selector(MessageViewController.registerClick))
+        
         // Do any additional setup after loading the view.
     }
 
@@ -22,4 +25,22 @@ class MessageViewController: UIViewController {
     }
     
 
+}
+
+
+
+extension MessageViewController{
+    
+    @objc func registerClick(){
+        
+        print("注册")
+        
+        let regisVC = RegistViewController ()
+        
+        self.navigationController?.pushViewController(regisVC, animated: true)
+        
+        
+        
+    }
+    
 }
